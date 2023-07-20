@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+class RootPresenter: ViewPresenter, ViewContainer, RootViewOutput {
+    
+    weak var view: RootViewInput?
+    
+    let viewModel: RootViewModel
+    
+    init(viewModel: RootViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    func appear() {
+        view?.update()
+    }
+    
+    func loadData(completion: VoidClosure?) {
+    }
+}
+

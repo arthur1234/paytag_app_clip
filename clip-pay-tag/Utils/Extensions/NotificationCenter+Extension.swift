@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public extension Notification.Name {
+    static let performRefreshRoot = Notification.Name(rawValue: "application_refresh_root")
+}
+

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct HistoryViewModel {
+    let title: String
+}
+
+protocol HistoryViewInput: ViewInput {
+    func update()
+}
+
+protocol HistoryViewOutput: AnyObject {
+    var viewModel: HistoryViewModel { get }
+}

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct RootViewModel {
+    let title: String
+}
+
+protocol RootViewInput: ViewInput {
+    func update()
+}
+
+protocol RootViewOutput: AnyObject {
+    var viewModel: RootViewModel { get }
+}

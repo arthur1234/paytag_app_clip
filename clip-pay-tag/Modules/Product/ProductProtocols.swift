@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct ProductViewModel {
+    let title: String
+    let product: ProductStorage
+}
+
+protocol ProductViewInput: ViewInput {
+    func update()
+}
+
+protocol ProductViewOutput: AnyObject {
+    var viewModel: ProductViewModel { get }
+}

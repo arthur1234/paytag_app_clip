@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+class HistoryPresenter: ViewPresenter, ViewContainer, HistoryViewOutput {
+    
+    weak var view: HistoryViewInput?
+    
+    let viewModel: HistoryViewModel
+    
+    init(viewModel: HistoryViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    func appear() {
+        view?.update()
+    }
+    
+    func loadData(completion: VoidClosure?) {
+    }
+}
